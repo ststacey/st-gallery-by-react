@@ -296,7 +296,7 @@ var AppComponent = React.createClass({
     this.rearrange(getRangeRandom(0,imgsArrangeArr.length));
 
   },
-
+  
     render: function() {
     var controllerUnits = [],
         imgFigures = [];
