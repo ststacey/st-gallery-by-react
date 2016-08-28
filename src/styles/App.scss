@@ -29,6 +29,40 @@ html,body {
   height: 100%;
   overflow: hidden;
   background-color: #ddd;
+  perspective:1800px;
+
+/*显示到最外层*/
+  @at-root {
+    .img-figure {
+      position: absolute;
+      width: 320px;
+      height:360px;
+      margin:0;
+      padding:40px;
+
+      background-color: #fff;
+
+      box-sizing:border-box;  /*width的值包含padding*/
+      cursor: pointer;
+      transform-origin:0 50% 0;
+      transform-style:preverse-3d;
+      transition:transform(left .6s eas e-in-out,top .6s ease-in-out);
+
+      &.is-inverse {
+        transform: translate(320px) rotateY(180deg);  //抖的效果
+      }
+    }
+    figcaption {
+      text-align: center;
+      .img-title {
+        margin: 20px 0 0 0;
+        color: #a7a0a2;
+        font-size: 16px;
+      }
+    }
+
+
+  }
 
 }
 
